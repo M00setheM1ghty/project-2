@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator-styles.css">
+    <script src="calculator.js"></script>
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calculator-grid">
+        <!--output screen-->
+        <div class="output-div" >
+            <div class="current-nums" data-current-nums></div>
+            <div class="previous-nums" data-current-nums></div>
+        </div>
+        <!--operand buttons with data attributes-->
+        <button class="operands" data-operand>/</button>
+        <button class="operands" data-operand>*</button>
+        <button class="operands" data-operand>+</button>
+        <button class="operands" data-operand>-</button>
+        <button class="operands" data-operand>%</button>
+        <button class="operands" data-equals>=</button>
+        <!--number buttons with data attributes-->
+        <button class="number" data-number>1</button>
+        <button class="number" data-number>2</button>
+        <button class="number" data-number>3</button>
+        <button class="number" data-number>4</button>
+        <button class="number" data-number>5</button>
+        <button class="number" data-number>6</button>
+        <button class="number" data-number>7</button>
+        <button class="number" data-number>8</button>
+        <button class="number" data-number>9</button>
+        <button class="number" data-number>0</button>
+        <button class="number">.</button>
+        <!-- delete buttons with data attributes-->
+        <button id="del-btn" date-delete>DEL</button>
+        <button id="all-clear-btn" data-clearall="">AC</button>
+
+    </div>
+</body>
+</html>
