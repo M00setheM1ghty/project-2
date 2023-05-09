@@ -5,6 +5,7 @@ let currentNums = document.querySelector('[data-current-nums]');
 let prevNums = document.querySelector('[data-prev-nums]');
 /* operands and number buttons*/
 let dataOperand = document.querySelectorAll('[data-operand]');
+let currentDataOperand;
 let numberButton = document.querySelectorAll('[data-number]');
 
 /*del, AC and equals buttons*/
@@ -20,12 +21,17 @@ numberButton.forEach(button => {
         currentNums.innerHTML += button.innerText
     })
 })
-/*add eventlistener to opernads */
+/*add eventlistener to operands */
 dataOperand.forEach(button => {
     button.addEventListener('click', () => {
         prevNums.innerHTML = currentNums.innerHTML;
         currentNums.innerHTML = '';
-
+    })
+})
+// set current data operand
+dataOperand.forEach(button =>{
+    button.addEventListener('click', ()=>{
+        currentDataOperand = button.innerHTML
     })
 })
 /* link clearDisplay() to AC button */
@@ -38,41 +44,36 @@ delBtn.addEventListener('click', deleteLast);
 function clearDisplay() {
     currentNums.innerHTML = '';
     prevNums.innerHTML = '';
+    currentDataOperand = '';
 }
 /* delete last entered num (DEL button function) */
 function deleteLast() {
     currentNums.innerHTML = currentNums.innerHTML.slice(0, -1);
 }
-/*. add numbers to display */
+/* solve the given equation 
+link data-equals button to solveEquation() */
+equalsBtn.addEventListener('click', () => {
+    let solved;
+    let current = parseFloat(currentNums.innerHTML);
+    let previous = parseFloat(prevNums.innerHTML);
+    switch (currentDataOperand) {
+        case '+':
+            solved = current + previous;
+            break;
+        case '-':
+            solved = previous - current;
+            break;
+        case '*':
+            solved = current * previous;
+            break;
+        case '/':
+            solved = previous / current;
+            break;
+        case '%':
+            solved = previous % current;
+            break;
+    }
+    prevNums.innerHTML = '';
+    currentNums.innerHTML = solved;
+});
 
-
-/* add operand to display */
-
-/* select operation */
-
-/* solve the given equation */
-function solveEquation(){
-let solved;
-let current = parseFloat(currentNums.innerHTML);
-let previous = parseFloat(prevNums.innerHTML);
-switch (current, previous) {
-    case '+':
-        solved = current + previous;
-        break;
-    case '-':
-        solved = previous - current;
-        break;
-    case '*':
-        solved = current * previous;
-        break;
-    case '/':
-        solved = previous / current;
-        break;
-    case '%':
-        solved = previous % current;
-        break;
-}
-
-}
-/*link data-quals button to solveEquation() */
-equalsBtn.addEventListener('click', solveEquation)
