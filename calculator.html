@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="calculator-styles.css">
-    <script src="calculator.js"></script>
+    <script src="calculator.js" defer></script>
     <title>Calculator</title>
 </head>
 <body>
     <div class="calculator-grid">
         <!--output screen-->
         <div class="output-div" >
-            <div class="current-nums" data-current-nums></div>
-            <div class="previous-nums" data-current-nums></div>
+            <div class="current-nums" data-current-nums>sdvcdev</div>
+            <div class="previous-nums" data-prev-nums>vrevvr</div>
         </div>
         <!--operand buttons with data attributes-->
         <button class="operands" data-operand>/</button>
@@ -35,7 +35,7 @@
         <button class="number" data-number>0</button>
         <button class="number">.</button>
         <!-- delete buttons with data attributes-->
-        <button id="del-btn" date-delete>DEL</button>
+        <button id="del-btn" data-delete>DEL</button>
         <button id="all-clear-btn" data-clearall="">AC</button>
 
     </div>

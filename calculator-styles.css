@@ -35,4 +35,9 @@ body {
     grid-column: 1/5;
     background-color: darkgrey;
     border: 1px solid whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-right: 50px;
 }
