@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    text-decoration: none;
+}
+body {
+    background-color: darkslategrey;
+}
+/*navbar styling*/
+header {
+    
+}
+#navbar {
+    border: 2px solid whitesmoke;
+    background-color: blanchedalmond;
+}
+#menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    height: 30px;    
+}
+ #menu a {
+    text-decoration: none;
+    margin: 20px 20px;
+    color: black;
+    font-size: 1.5rem;
+ }
+#menu a:hover {
+    color: chocolate;
+}
